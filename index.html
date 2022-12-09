@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                dominantColor: '#212428',
+                dominantFontColor: '#C4CFDE',
+                lightDominantColor: 'rgba(33, 36, 40, .9)',
+                undominantFontColor: '#878e99',
+                accentColor: '#FF014F',
+                btnGradient: 'linear-gradient(to right bottom, #212428, #16181c)',
+                btnColor: '#1f2226',
+                btnColor2: '#222529',
+                lightgray: '#545961',
+                dimWhite: 'rgba(255, 255, 255, .9)',
+                red: 'red'
+              },
+              screens: {
+                'xs': '430px',
+                'sm': '640px',
+                'md': '768px',
+                'mlg': '1100px',
+                'lg': '1024px',
+                'xl': '1230px',
+                '2xl': '1536px',
+              },
+              height: {
+                '400px': '600px',
+                '500': '800px'
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-dominantColor">
+    <header class="z-10">
+        <nav class="px-16 py-4 lg:grid lg:grid-cols-3 bg-lightDominantColor z-10 flex justify-between align-center">
+            <div class="">
+                <img src="./images/Ellipse 6.png" alt="" class="">
+            </div>
+            <ul class="col-span-2 text-dominantFontColor hidden lg:flex justify-between items-center">
+                <li><a href="#home" class="hover:text-accentColor">HOME</a></li>
+                <li><a href="#experience" class="hover:text-accentColor">EXPERIENCE</a></li>
+                <li><a href="#education" class="hover:text-accentColor">EDUCATION</a></li>
+                <li><a href="#portfolio" class="hover:text-accentColor">PORTFOLIO</a></li>
+                <li><a href="#blog" class="hover:text-accentColor">BLOG</a></li>
+                <li><a href="#contact-me" class="hover:text-accentColor">CONTACT ME</a></li>
+            </ul>
+            <button class="lg:hidden">
+                <div class="h-2 w-12 bg-accentColor rounded mb-2"></div>
+                <div class="h-2 w-12 bg-accentColor rounded mb-2"></div>
+                <div class="h-2 w-12 bg-accentColor rounded"></div>
+            </button>
+        </nav>
+    </header>
+    <main class="">
+        <div id="home" class="mt-24 xl:grid xl:grid-cols-10 gap-8 flex flex-col flex-col-reverse">
+            <!-- <div class="my-picture-container w-full p-8 flex justify-center items-center col-span-6 xl:">
+                <img src="./images/banner-02.png" alt="">
+            </div> -->
+            
+            <div class=" flex flex-col justify-between col-span-4">
+                <div class="introduction-container p-8 bg-dominantColor">
+                    <img src="./images/icon _user_.png" alt="" class="user-icon bg-accentColor rounded-full p-2 mb-4">
+                    <h1 class="text-white text-5xl font-bold mb-4">Hi, I'm <span class="text-accentColor">Kevin Rodrigue</span></h1>
+                    <p class="text-dominantFontColor text-base mb-4 w-4/6 xl:w-11/12">Tech Enthusiast, Web and Frontend Developer with a good foundation in web technologies, web development and mobile development based in Kigali, Rwanda</p>
+                    <section class="flex flex-col justify-between gap-4">
+                        <div class="">
+                            <img src="./images/icon _file_.png" alt="" class="xs:inline">
+                            <span class="xs:inline xs:relative xs:top-px text-dominantFontColor xs:ml-2">Web and Frontend Developer</span>
+                        </div>
+                        <div>
+                            <img src="./images/icon _mail_.png" alt="" class="inline">
+                            <p class="xs:inline xs:relative xs:top-px text-dominantFontColor xs:ml-2">kevinbivegete@gmail.com</p>
+                        </div>
+                        <div>
+                            <img src="./images/icon _pin_.png" alt="" class="inline">
+                            <p class="xs:inline xs:relative xs:top-px text-dominantFontColor xs:ml-2">Kigali, Rwanda</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="download-cv-container p-8 bg-dominantColor">
+                    <p class="text-base text-dominantFontColor mb-4">Download my Curriculum Vitae:</p>
+                    <div>
+                        <button class="btn bg-btnColor px-4 py-3 mr-6 text-accentColor">DOWNLOAD CV</button>
+                        <button class="btn bg-btnColor px-4 py-3 text-accentColor">CONTACT ME</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-picture-container w-full p-8 flex justify-center items-center col-span-6 lg:h-500 h-400px xl:h-auto">
+                <!-- <img src="./images/Rectangle 7.png" alt="" class="try"> -->
+                <!-- <img src="./images/Rectangle 7.png" alt=""> -->
+                <!-- <img src="./images/Rectangle 7.png" alt="" class="lg:hidden"> -->
+                <div class="try w-full h-full">
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+        <div id="experience">
+            <div class="text-center mb-24">
+                <p class="text-sm text-accentColor">OVER 1 YEAR OF EXPERIENCE</p>
+                <h1 class="text-6xl font-bold text-dominantFontColor">My Experience</h1>
+            </div>
+            <div class="mb-10 experience-card bg-dominantColor py-4 pl-4 pr-6 flex mlg:flex-row flex-col flex-wrap align-content gap-8 rounded-xl">
+                <div class="mlg:grow flex mlg:flex-row flex-col justify-start align-center">
+                    <img src="./images/Rectangle 10.png" alt="" class="rounded-xl hidden mlg:inline-block">
+                    <img src="./images/portfolio-01.jpg" alt="" class="mlg:hidden">
+                    <div class="col-span-3 text-dominantFontColor ml-8">
+                        <button class="b mb-6 mt-5 bg-lightgray py-px px-2 rounded-full text-sm">2022-Present</button>
+                        <h2 class="text-3xl mb-6 font-semibold">Rainbow Themes</h2>
+                        <h3 class="text-xl mb-1.5">Frontend Developer</h3>
+                        <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                    </div>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor mlg:self-center self-start px-8">CONTACT ME</button>
+            </div>
+            <div class="mb-10 experience-card bg-dominantColor py-4 pl-4 pr-6 flex mlg:flex-row flex-col flex-wrap align-content gap-8 rounded-xl">
+                <div class="mlg:grow flex mlg:flex-row flex-col justify-start align-center">
+                    <img src="./images/Rectangle 10.png" alt="" class="rounded-xl hidden mlg:inline-block">
+                    <img src="./images/portfolio-01.jpg" alt="" class="mlg:hidden">
+                    <div class="col-span-3 text-dominantFontColor ml-8">
+                        <button class="b mb-6 mt-5 bg-lightgray py-px px-2 rounded-full text-sm">2022-Present</button>
+                        <h2 class="text-3xl mb-6 font-semibold">Rainbow Themes</h2>
+                        <h3 class="text-xl mb-1.5">Frontend Developer</h3>
+                        <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                    </div>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor mlg:self-center self-start px-8">CONTACT ME</button>
+            </div>
+            <div class="mb-10 experience-card bg-dominantColor py-4 pl-4 pr-6 flex mlg:flex-row flex-col flex-wrap align-content gap-8 rounded-xl">
+                <div class="mlg:grow flex mlg:flex-row flex-col justify-start align-center">
+                    <img src="./images/Rectangle 10.png" alt="" class="rounded-xl hidden mlg:inline-block">
+                    <img src="./images/portfolio-01.jpg" alt="" class="mlg:hidden">
+                    <div class="col-span-3 text-dominantFontColor ml-8">
+                        <button class="b mb-6 mt-5 bg-lightgray py-px px-2 rounded-full text-sm">2022-Present</button>
+                        <h2 class="text-3xl mb-6 font-semibold">Rainbow Themes</h2>
+                        <h3 class="text-xl mb-1.5">Frontend Developer</h3>
+                        <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                    </div>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor mlg:self-center self-start px-8">CONTACT ME</button>
+            </div>
+        </div>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+        <div id="education">
+            <div class="text-center mb-24">
+                <p class="text-sm text-accentColor">SENIOR UNIVERSITY STUDENT</p>
+                <h1 class="text-6xl font-bold text-dominantFontColor">Education</h1>
+            </div>
+            <div class="mb-10 experience-card bg-dominantColor py-4 pl-4 pr-6 flex mlg:flex-row flex-col flex-wrap align-content gap-8 rounded-xl">
+                <div class="mlg:grow flex mlg:flex-row flex-col justify-start align-center">
+                    <img src="./images/Rectangle 21.png" alt="" class="rounded-xl hidden mlg:inline-block">
+                    <img src="./images/portfolio-01.jpg" alt="" class="mlg:hidden">
+                    <div class="col-span-3 text-dominantFontColor ml-8">
+                        <button class="b mb-6 mt-5 bg-lightgray py-px px-2 rounded-full text-sm">2019-Present</button>
+                        <h2 class="text-3xl mb-6 font-semibold">Software Development</h2>
+                        <h3 class="text-xl mb-1.5">Computer Science Major</h3>
+                        <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                    </div>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor mlg:self-center self-start px-8">CONTACT ME</button>
+            </div>
+            <div class="mb-10 experience-card bg-dominantColor py-4 pl-4 pr-6 flex mlg:flex-row flex-col flex-wrap align-content gap-8 rounded-xl">
+                <div class="mlg:grow flex mlg:flex-row flex-col justify-start align-center">
+                    <img src="./images/Rectangle 21.png" alt="" class="rounded-xl hidden mlg:inline-block">
+                    <img src="./images/portfolio-01.jpg" alt="" class="mlg:hidden">
+                    <div class="col-span-3 text-dominantFontColor ml-8">
+                        <button class="b mb-6 mt-5 bg-lightgray py-px px-2 rounded-full text-sm">2020-2020</button>
+                        <h2 class="text-3xl mb-6 font-semibold">Coding Bootcamp</h2>
+                        <h3 class="text-xl mb-1.5">Computer Science Major</h3>
+                        <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                    </div>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor mlg:self-center self-start px-8">CONTACT ME</button>
+            </div>
+            <!-- <div class="mb-10 experience-card bg-dominantColor p-8 grid grid-cols-5 align-center content-center justify-center gap-8 rounded-xl">
+                <img src="./images/Rectangle 21.png" alt="" class="rounded-xl">
+                <div class="col-span-3 text-dominantFontColor">
+                    <button class="b mb-3 mt-4 bg-lightgray py-px px-2 rounded-full text-sm">2022-Present</button>
+                    <h2 class="text-3xl mb-4 font-semibold">Rainbow Themes</h2>
+                    <h3 class="text-xl mb-1.5">Frontend Developer</h3>
+                    <p class="text-base text-undominantFontColor">Reinventing the way you create websites</p>
+                </div>
+                <button class="btn bg-btnColor2 h-16 text-accentColor self-center">CONTACT ME</button>
+            </div> -->
+        </div>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+        <div id="portfolio">
+            <div class="text-center mb-24">
+                <p class="text-sm text-accentColor">PROJECTS I HAVE WORKED ON</p>
+                <h1 class="text-6xl font-bold text-dominantFontColor">My Portfolio</h1>
+            </div>
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 lg:w-full gap-10 align-center">
+                <div class="p-6 bg-dominantColor portfolio-card">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">REACTJS</p>
+                        <div>
+                            <button><img src="./images/icon _heart_.png" alt="" class="inline"></button>
+                            <p class="inline text-white">0</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Responsive Web Application built with ReactJS</p>
+                </div>
+                <div class="p-6 bg-dominantColor portfolio-card">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">REACT NATIVE</p>
+                        <div>
+                            <button><img src="./images/icon _heart_.png" alt="" class="inline"></button>
+                            <p class="inline text-white">0</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Mobile Application built with React Native</p>
+                </div>
+                <div class="p-6 bg-dominantColor portfolio-card hidden lg:block">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">HTML, CSS & JS</p>
+                        <div>
+                            <button><img src="./images/icon _heart_.png" alt="" class="inline"></button>
+                            <p class="inline text-white">0</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Website built with HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+        <div id="blog">
+            <div class="text-center mb-24">
+                <p class="text-sm text-accentColor">VISIT MY BLOG</p>
+                <h1 class="text-6xl font-bold text-dominantFontColor">My Blog</h1>
+            </div>
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
+                <div class="p-6 bg-dominantColor portfolio-card">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">WEB DEVELOPMENT</p>
+                        <div>
+                            <button><img src="./images/icon _time history_.png" alt="" class="inline"></button>
+                            <p class="inline text-white text-sm">1hr read</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Responsive Web Application built with ReactJS</p>
+                </div>
+                <div class="p-6 bg-dominantColor portfolio-card">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">REACT NATIVE</p>
+                        <div>
+                            <button><img src="./images/icon _time history_.png" alt="" class="inline"></button>
+                            <p class="inline text-white text-sm">15 min read</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Mobile Application built with React Native</p>
+                </div>
+                <div class="p-6 bg-dominantColor portfolio-card hidden lg:block">
+                    <img src="./images/Rectangle 36.png" alt="" class="mb-4 w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-sm text-accentColor">HTML, CSS & JS</p>
+                        <div>
+                            <button><img src="./images/icon _time history_.png" alt="" class="inline"></button>
+                            <p class="inline text-white text-sm">30 min read</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl w-full font-bold text-dominantFontColor">Website built with HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+        <div id="contact-me">
+            <div class="text-center mb-24">
+                <p class="text-sm text-accentColor">REACH OUT TO ME</p>
+                <h1 class="text-6xl font-bold text-dominantFontColor">Contact Me</h1>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="contact-me-info bg-dominantColor p-8">
+                    <img src="./images/Rectangle 60.png" alt="" class="w-full mb-4">
+                    <h2 class="text-accentColor text-6xl font-bold mb-2">Kevin Rodrigue</h2>
+                    <p class="text-xl text-dominantFontColor mb-6">Frontend Developer</p>
+                    <p class="text-lg text-dominantFontColor">I am available for full-time, part-ime and freelance work opportunities. Connect with me via and call in to my account.</p>
+                    <div class="mt-6 mb-6">
+                        <p class="text-accentColor">Phone: <span class="text-dominantFontColor">+250782174079</span></p>
+                        <p class="text-accentColor">Email: <span class="text-dominantFontColor">kevinbivegete@gmail.com</span></p>
+                    </div>
+                    <p class="text-base text-dominantFontColor">FIND ME WITH:</p>
+                    <div class="mt-6 flex justify-start align-center gap-10">
+                        <button><img src="./images/icon _instagram_.png" alt="" class="btn bg-dominantColor p-3 rounded-lg"></button>
+                        <button><img src="./images/icon _linkedin_.png" alt="" class="btn bg-dominantColor p-3 rounded-lg"></button>
+                        <button><img src="./images/icon _twitter_.png" alt="" class="btn bg-dominantColor p-3 rounded-lg"></butt>
+                    </div>
+                </div>
+                <form action="" class="p-10 bg-dominantColor text-dominantFontColor">
+                    <div class="flex flex-col mb-8">
+                        <label for="name" class="mb-px text-lg text-accentColor">Full Name</label>
+                        <input type="text" class="text-black px-2 py-3 rounded bg-dimWhite">
+                    </div>
+                    <div class="flex flex-col mb-8">
+                        <label for="name" class="mb-px text-lg text-accentColor">Email Address</label>
+                        <input type="email" class="text-black px-2 py-3 rounded">
+                    </div>
+                    <!-- <div class="flex flex-col mb-10">
+                        <label for="name" class="mb-2 text-lg text-accentColor">Telephone Number</label>
+                        <input type="tel" class="text-black px-2 py-3 rounded">
+                    </div> -->
+                    <div class="flex flex-col mb-8">
+                        <label for="name" class="mb-px text-lg text-accentColor">Subject</label>
+                        <input type="text" class="text-black px-2 py-3 rounded bg-dimWhite">
+                    </div>
+                    <div class="flex flex-col mb-10">
+                        <label for="name" class="mb-px text-lg text-accentColor">Message</label>
+                        <!-- <input type="email" class="text-black px-2 py-3 rounded"> -->
+                        <textarea name="" id="" cols="30" rows="10" class="px-2 py-4 text-black bg-dimWhite"></textarea>
+                    </div>
+                    <input type="submit" value="SEND MESSAGE" class="btn py-3 rounded-md cursor-pointer px-6 text-accentColor bg-dominantColor">
+                </form>
+            </div>
+        </section>
+
+        <hr class="mt-32 mb-32 border-px border-black">
+
+    </main>
+    <footer>
+        <p class="text-dominantFontColor text-center mb-20">copyright © 2022. All rights reserved by <span class="text-accentColor">Kevin Rodrigue</span></p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>

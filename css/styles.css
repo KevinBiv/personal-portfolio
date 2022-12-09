@@ -1,0 +1,66 @@
+
+
+main {
+    padding: 0 130px;
+}
+
+header {
+    transition: navbar 2s ease-in-out;
+}
+
+/* nav {
+    background-color: red;
+    transition: 0.6s;
+} */
+
+.sticky {
+    box-shadow: 0px 10px 10px #1c1e22;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.6s;
+    backdrop-filter: blur(8px);
+    /* transition: navbar 2s .5s ease-in-out; */
+}
+
+form, .introduction-container, .download-cv-container, .btn, .my-picture-container, .experience-card,
+.portfolio-card, .contact-me-info {
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+
+.user-icon {
+    box-shadow: 0px 0px 4px 10px rgba(255, 1, 79, 0.25);
+}
+
+/* .b {
+    padding-left: 6px;
+    padding-right: 6px;
+} */
+
+.try {
+    background-image: url(../images/Rectangle\ 7.png);
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 0 50px;
+    }
+
+
+    .try {
+        background-image: url(../images/Rectangle\ 7.png);
+        background-position: top;
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+    }
+}
+
+@media(max-width: 640px) {
+    .try {
+        background-position: center;
+    }
+}
