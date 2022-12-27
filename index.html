@@ -312,14 +312,19 @@
                         <button><img src="./images/icon _twitter_.png" alt="" class="btn bg-dominantColor p-3 rounded-lg"></butt>
                     </div>
                 </div>
-                <form action="" class="p-10 bg-dominantColor text-dominantFontColor">
+                <form action="" id="form" class="p-10 bg-dominantColor text-dominantFontColor">
+                    <p class="top-error-message mb-4 hidden-class" style="color: red;">All fields must be filled</p>
                     <div class="flex flex-col mb-8">
                         <label for="name" class="mb-px text-lg text-accentColor">Full Name</label>
-                        <input type="text" class="text-black px-2 py-3 rounded bg-dimWhite">
+                        <input id="name" type="text" class="text-black px-2 py-3 rounded bg-dimWhite">
+                        <p class="name-error-message hidden-class" style="color: red; text-align: end; font-size: 14px;">This field is invalid</p>
+                        <!-- <p class="top-error-message mb-4 hidden-class" style="color: red;">All fields must be filled</p> -->
                     </div>
                     <div class="flex flex-col mb-8">
                         <label for="name" class="mb-px text-lg text-accentColor">Email Address</label>
-                        <input type="email" class="text-black px-2 py-3 rounded">
+                        <input id="email" type="email" class="text-black px-2 py-3 rounded" name="email">
+                        <p class="email-error-message hidden-class" style="color: red; text-align: end; font-size: 14px;">This field is invalid</p>
+                        <!-- <p class="top-error-message mb-4 hidden-class" style="color: red;">All fields must be filled</p> -->
                     </div>
                     <!-- <div class="flex flex-col mb-10">
                         <label for="name" class="mb-2 text-lg text-accentColor">Telephone Number</label>
@@ -327,12 +332,16 @@
                     </div> -->
                     <div class="flex flex-col mb-8">
                         <label for="name" class="mb-px text-lg text-accentColor">Subject</label>
-                        <input type="text" class="text-black px-2 py-3 rounded bg-dimWhite">
+                        <input id="subject" type="text" class="text-black px-2 py-3 rounded bg-dimWhite" name="subject">
+                        <p class="subject-error-message hidden-class" style="color: red; text-align: end; font-size: 14px;">This field is invalid</p>
+                        <!-- <p class="top-error-message mb-4 hidden-class" style="color: red;">All fields must be filled</p> -->
                     </div>
                     <div class="flex flex-col mb-10">
                         <label for="name" class="mb-px text-lg text-accentColor">Message</label>
                         <!-- <input type="email" class="text-black px-2 py-3 rounded"> -->
-                        <textarea name="" id="" cols="30" rows="10" class="px-2 py-4 text-black bg-dimWhite"></textarea>
+                        <textarea name="" id="message" cols="30" rows="10" class="px-2 py-4 text-black bg-dimWhite" name="message"></textarea>
+                        <p class="message-error-message hidden-class" style="color: red; text-align: end; font-size: 14px;">This field is invalid</p>
+                        <!-- <p class="top-error-message mb-4 hidden-class" style="color: red;">All fields must be filled</p> -->
                     </div>
                     <input type="submit" value="SEND MESSAGE" class="btn py-3 rounded-md cursor-pointer px-6 text-accentColor bg-dominantColor">
                 </form>

@@ -64,3 +64,14 @@ form, .introduction-container, .download-cv-container, .btn, .my-picture-contain
         background-position: center;
     }
 }
+
+
+/* CONTACT ME FORM VALIDATION */
+.hidden-class {
+    display: none;
+}
+
+.required {
+    border-color: red;
+    outline: red;
+}
