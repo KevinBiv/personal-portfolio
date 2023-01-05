@@ -3,113 +3,89 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 300);
 })
 
+// Popup
+function togglePopup() {
+    document.getElementById('popup-1').classList.toggle("active");
+}
+
+function calculatorPopup() {
+    document.getElementById('popup-2').classList.toggle("active");
+}
+
 // CONTACT ME FORM VALIDATION
 
-const form = document.getElementById("form");
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
 
-const nameError = document.querySelector(".name-error-message");
-const emailError = document.querySelector(".email-error-message");
-const subjectError = document.querySelector(".subject-error-message");
-const messageError = document.querySelector(".message-error-message");
-const topError = document.querySelector(".top-error-message");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-console.log(nameError);
+    checkInputs();
+})
 
-    const nameValue = name.value;
-    const emailValue = email.value;
-    const subjectValue = subject.value;
-    const messageValue = message.value;
+const checkInputs = () => {
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const subjectValue = subject.value.trim();
+    const messageValue = message.value.trim();
 
-    const validateInputs = () => {
-
-        if(nameValue.trim() == "") {
-            nameError.classList.add("hidden-class");
-        }
-        
-        if(emailValue.trim() == "") {
-            emailError.classList.add("hidden-class");
-        }
-
-        if(subjectValue.trim() == "") {
-            subjectError.classList.add("hidden-class");
-        }
-
-        if(messageValue.trim() == "") {
-            messageError.classList.add("hidden-class");
-        }
-
-
-        if(nameValue.trim() == "") {
-            nameError.classList.remove("hidden-class");
-        }
-
-        if(emailValue.trim() == "") {
-            emailError.classList.remove("hidden-class");
-        }
-
-        if(subjectValue.trim() == "") {
-            subjectError.classList.remove("hidden-class");
-        }
-
-        if(messageValue.trim() == "") {
-            messageError.classList.remove("hidden-class");
-        }
+    if(nameValue === '') {
+        setErrorFor(name, "Name is required")
+    } else {
+        setSuccessFor(name);
     }
 
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // if(nameValue == "" || emailValue == "" || subjectValue == "" || messageValue == "") {
-        //     topError.classList.remove("hidden-class");
-        // }
-        validateInputs();
-    })
+    if(emailValue === '') {
+        setErrorFor(email, "Email is required")
+    } else if(!isEmail(emailValue)) {
+        setErrorFor(email, "Email is invalid")
+    } else {
+        setSuccessFor(email)
+    }
 
-    name.addEventListener('input', () => {
-        nameError.classList.add("hidden-class")
-    })
+    if(subjectValue === '') {
+        setErrorFor(subject, "Subject is required")
+    } else {
+        setSuccessFor(subject)
+    }
 
-    email.addEventListener('input', () => {
-        emailError.classList.add("hidden-class")
-    })
+    if(messageValue === '') {
+        setErrorFor(message, "Message is required")
+    } else {
+        setSuccessFor(message)
+    }
+}
 
-    subject.addEventListener('input', () => {
-        subjectError.classList.add("hidden-class")
-    })
+function setSuccessFor(input) {
+    const formControl = input.parentElement.parentElement;
+    const errorMessage = document.querySelector('small');
 
-    message.addEventListener('input', () => {
-        messageError.classList.add("hidden-class")
-    })
+    // removing the error class
+    formControl.classList.remove('error');
 
-// const checkInputs = () => {
-//     const nameValue = name.value;
-//     const emailValue = email.value;
-//     const subjectValue = subject.value;
-//     const messageValue = message.value;
+    // removing the error message
+    errorMessage.innerText = "";
 
-//     if(nameValue == "") {
-//         nameError.classList.remove("hidden-class");
-//         console.log("Error at Name Input");
-//     } else if(messageValue == "") {
-//         nameError.classList.remove("hidden-class");
-//         console.log("Error at Name Input");
-//     } else if(subjectValue == "") {
-//         subjectError.classList.remove("hidden-class");
-//         console.log("Error at Name Input");
-//     } else if(messageError == "") {
-//         messageError.classList.remove("hidden-class");
-//         console.log("Error at Message Input");
-//     } else {
-//         nameError.classList.add("hidden-class");
-//     }
-// }
+    // adding success class
+    formControl.classList.add('success');
+}
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
+function setErrorFor(input, message) {
+    const formControl = input.parentElement.parentElement;
+    const errorMessage = document.querySelector('small');
 
-//     checkInputs();
-// })
+    // adding 
+
+    // adding error class
+    formControl.classList.add('error');
+
+    // adding error message in the small tag
+    errorMessage.innerText = message;
+}
+
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
