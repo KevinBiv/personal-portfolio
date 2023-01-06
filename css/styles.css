@@ -41,6 +41,14 @@ form, .introduction-container, .download-cv-container, .btn, .my-picture-contain
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
 }
 
+.portfolio-card p {
+    transition: 0.3s;
+}
+
+.portfolio-card p:hover {
+    color: #FF014F;
+}
+
 .user-icon {
     box-shadow: 0px 0px 4px 10px rgba(255, 1, 79, 0.25);
 }
