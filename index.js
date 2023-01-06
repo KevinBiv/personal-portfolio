@@ -3,6 +3,14 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 300);
 })
 
+function showNavbar() {
+    const navList = document.querySelector('.nav-list');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    navList.classList.toggle('active');
+    hamburgerMenu.classList.toggle('active');
+    // hamburgerMenu.classList.add('hidden');
+}
+
 // Popup
 function togglePopup() {
     document.getElementById('popup-1').classList.toggle("active");
