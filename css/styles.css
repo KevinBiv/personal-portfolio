@@ -12,6 +12,14 @@ nav {
     z-index: 3;
 }
 
+img {
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(0.9);
+}
+
 /* nav {
     background-color: red;
     transition: 0.6s;
@@ -47,7 +55,12 @@ form, .introduction-container, .download-cv-container, .btn, .my-picture-contain
     /* background-position: center; */
     /* background-repeat: no-repeat; */
     background-size: cover;
+    /* transition: 0.3s; */
 }
+
+/* .try:hover {
+    transform: scale(0.9);
+} */
 
 .home-left {
     transition: all 500ms ease-in-out
